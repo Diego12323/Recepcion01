@@ -27,21 +27,113 @@ public class Room extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        Escritorio = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        mi_Cerrar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mi_Registro = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        mi_Visualizar = new javax.swing.JMenuItem();
+
+        jMenu3.setText("File");
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(302, 656));
+
+        Escritorio.setBackground(new java.awt.Color(163, 228, 233));
+
+        javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
+        Escritorio.setLayout(EscritorioLayout);
+        EscritorioLayout.setHorizontalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 304, Short.MAX_VALUE)
+        );
+        EscritorioLayout.setVerticalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 639, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("Achivo");
+
+        jMenuItem1.setText("Abrir");
+        jMenu1.add(jMenuItem1);
+
+        mi_Cerrar.setText("Cerrar");
+        mi_Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_CerrarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mi_Cerrar);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Registrar");
+        jMenu2.setToolTipText("Para poder registrar a los pacientes");
+
+        mi_Registro.setText("Abrir");
+        mi_Registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_RegistroActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_Registro);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu5.setText("Visualizar");
+        jMenu5.setToolTipText("Donde se ven todas los registros de citas");
+
+        mi_Visualizar.setText("Abrir");
+        mi_Visualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_VisualizarActionPerformed(evt);
+            }
+        });
+        jMenu5.add(mi_Visualizar);
+
+        jMenuBar1.add(jMenu5);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(Escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(Escritorio)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mi_CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_CerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_mi_CerrarActionPerformed
+
+    private void mi_RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_RegistroActionPerformed
+        Registro_Citas registro = new Registro_Citas();
+        Escritorio.add(registro);
+        registro.setVisible(true);
+    }//GEN-LAST:event_mi_RegistroActionPerformed
+
+    private void mi_VisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_VisualizarActionPerformed
+        Historial_Citas historial = new Historial_Citas();
+        Escritorio.add(historial);
+        historial.setVisible(true);
+    }//GEN-LAST:event_mi_VisualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +171,17 @@ public class Room extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem mi_Cerrar;
+    private javax.swing.JMenuItem mi_Registro;
+    private javax.swing.JMenuItem mi_Visualizar;
     // End of variables declaration//GEN-END:variables
 }
