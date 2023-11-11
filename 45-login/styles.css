@@ -4,15 +4,93 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+.box1 button{
+    padding: 10PX 10PX;
+    border-radius: 50px;
+    float:right;
+}
+.box_e {
+    justify-content: center; 
+    flex-direction: column;
+    margin: auto;
+}
+.contenedor-boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+.box1{
+    border: 5px solid #106EBE;
+    background: #B5B4B4;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+.tex{
+    text-align: center;
+    margin: auto;
+}
+.box2 {
+    border: 5px solid #106EBE;
+    background: #B5B4B4;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+}
+.texto {
+    text-align: center;
+    margin: auto;
+}
+.box3 {
+    background: #106EBE;
+    width: 45%;
+    padding: 20px;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.inicio, .box1, .box2, .titulo, .contenedor-boxes, .loginForm {
+    margin-bottom: 20px;
+}
+.box4 {
+    background: #106EBE;
+    width: 45%;
+    padding: 20px;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.caja1, .caja2, .caja3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .cuadro1, .cuadro2, .cuadro3 {
+    margin-top: 10px;
+}
+.caja4, .caja5, .caja6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .cuadro4, .cuadro5, .cuadro6 {
+    margin-top: 10px;
+}
+.titulo {
+    text-align: center;
+}
 body {
     display: flex;
     align-items: center;
     justify-content: center; 
     min-height: 100vh;
-    border: 1px solid #000;
     background: linear-gradient(180deg, rgba(0, 133, 255, 0.82) 0%, rgba(230, 232, 233, 0.82) 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.titulo2{
+    border-color: #B01717;
+}
+.inicio{
+    border: #fff;
 }
 .Bienvenido{
     display: flex;
@@ -37,6 +115,21 @@ body {
     font-family: Roboto;
     text-align: center;
     padding: 100px 30px;
+}
+.datos3{
+    display: flex;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    text-align: center;
+    flex-direction:column;
+    background:#B5B4B4;
+    border-radius: 16px;
+    padding: 100px 30px;
+}
+.img_doc{
+    float: left;
+    margin: 10px;
 }
 .logueo {
     display: flex;
@@ -90,4 +183,8 @@ form .link {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
 }
